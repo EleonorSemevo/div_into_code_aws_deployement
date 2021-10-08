@@ -28,8 +28,18 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'dotenv-rails' # Required to manipulate environment variables in the development environment
+gem 'unicorn' # Application server unicorn
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'capistrano', '3.16.0' # set of tools for capistrano
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
